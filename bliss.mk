@@ -14,10 +14,10 @@
 
 $(call inherit-product, device/wileyfox/crackling/full_crackling.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common Bliss stuff.
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_crackling
+PRODUCT_NAME := blisspop_crackling
 BOARD_VENDOR := wileyfox
 PRODUCT_DEVICE := crackling
 

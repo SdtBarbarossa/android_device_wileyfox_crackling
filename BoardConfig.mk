@@ -74,6 +74,15 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 BOARD_SEPOLICY_DIRS += \
     device/wileyfox/crackling/sepolicy
 
+# Blisspop
+BLISS_STRICT := true
+BLISS_O3 := true
+BLISS_GRAPHITE := false
+BLISS_KRAIT := false
+BLISS_PIPE := true
 
 # inherit from the proprietary version
 -include vendor/wileyfox/crackling/BoardConfigVendor.mk
+
+# Blisspop vendor
+-include vendor/bliss/config/sm.mk
