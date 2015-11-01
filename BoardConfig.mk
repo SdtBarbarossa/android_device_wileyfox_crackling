@@ -61,8 +61,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1610612224
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 13295385600
 
 # Recovery
-TARGET_OTA_ASSERT_DEVICE := crackling,vixen
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_OTA_ASSERT_DEVICE := crackling
 
 # Wifi - EAP-SIM
 CONFIG_EAP_PROXY := qmi
@@ -74,6 +73,13 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 BOARD_SEPOLICY_DIRS += \
     device/wileyfox/crackling/sepolicy
 
+#RR
+RROPTI := true
+RR_O3 := true
+RR_STRICT := true
+RR_GRAPHITE := true
+RR_KRAIT := true
+RR_PIPE := true
 
 # inherit from the proprietary version
 -include vendor/wileyfox/crackling/BoardConfigVendor.mk
