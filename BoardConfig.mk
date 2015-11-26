@@ -26,7 +26,11 @@ TARGET_CPU_CORTEX_A53 := true
 # Kernel
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
-TARGET_KERNEL_CONFIG := cyanogenmod_crackling-64_defconfig
+# outtake this to use prebuild kernel
+# TARGET_KERNEL_CONFIG := cyanogenmod_crackling-64_defconfig
+
+# add this to use prebuild kernel
+TARGET_PREBUILT_KERNEL := device/wileyfox/crackling/kernel
 
 WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
